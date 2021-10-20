@@ -28,7 +28,7 @@ contract Wallet {
         dest.transfer(1, true, 160);
     }
 
-        function sendTransactionPayingComissionNoBounce(address dest, uint128 value) public pure checkOwnerAndAccept {
+    function sendTransactionPayingComissionNoBounce(address dest, uint128 value) public pure checkOwnerAndAccept {
         dest.transfer(value, false, 1);
     }
 
