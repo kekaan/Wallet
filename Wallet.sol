@@ -26,5 +26,6 @@ contract Wallet {
     
     function sendAllAndDestroyWallet(address dest) public pure checkOwnerAndAccept {
         dest.transfer(1, true, 160);
+        // selfdestruct(dest);
     }
 }
