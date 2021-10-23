@@ -15,7 +15,6 @@ contract Wallet {
 		_;
 	}
     
-
     function sendTransactionPayingComission(address dest, uint128 value) public pure checkOwnerAndAccept {
         dest.transfer(value, true, 1);
     }
