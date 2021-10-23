@@ -11,8 +11,8 @@ contract Wallet {
 
     modifier checkOwnerAndAccept {
         require(msg.pubkey() == tvm.pubkey(), 100);
-		tvm.accept();
-		_;
+	    tvm.accept();
+	    _;
 	}
     
     function sendTransactionPayingComission(address dest, uint128 value) public pure checkOwnerAndAccept {
